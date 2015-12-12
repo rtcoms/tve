@@ -33,10 +33,12 @@ gem 'attachinary', git: "https://github.com/assembler/attachinary.git"
 gem 'countries'
 gem 'country_select'
 gem 'simple_form'
-gem 'pry'
+gem 'pry-rails', :group => :development
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'devise'
 gem 'rest_client'
+gem 'delayed_job_active_record'
+gem 'mina'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
