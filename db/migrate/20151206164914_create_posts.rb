@@ -7,8 +7,9 @@ class CreatePosts < ActiveRecord::Migration
       t.references :user
       t.string :post_type
       t.integer :status
-      t.date :event_date
-      t.string :country
+      t.date :post_date
+      t.string :countries
+      t.string :tags
 
       t.timestamps null: false
     end
