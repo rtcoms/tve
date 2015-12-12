@@ -34,6 +34,12 @@ gem 'countries'
 gem 'country_select'
 gem 'simple_form'
 gem 'pry-rails', :group => :development
+gem 'bullet', :group => :development
+gem 'peek', :group => :development
+gem 'reek', :group => :development
+gem 'better_errors', :group => :development
+gem 'binding_of_caller', :group => :development
+
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'devise'
 gem 'rest_client'
