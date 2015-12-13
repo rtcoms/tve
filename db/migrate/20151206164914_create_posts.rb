@@ -1,17 +1,16 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.string :title
-      t.text :summary
-      t.string :post_type
-      t.integer :status
+      t.integer :post_type, null: false
       t.date :post_for_date
-      t.string :countries
-      t.string :subscribed_tags
+      t.references :category, null: false
       t.string :tags
-      t.references :category
+      t.string :subscribed_tags
+      t.string :countries
+      t.string :title, null: false
+      t.text :summary
+      t.integer :status, null: false
       t.references :user
-
       t.timestamps null: false
     end
   end

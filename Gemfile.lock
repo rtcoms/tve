@@ -237,6 +237,7 @@ GEM
       netrc (~> 0.7)
     rest_client (1.8.3)
       netrc (~> 0.7.7)
+    ruby-oembed (0.8.14)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -331,6 +332,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   reek
   rest_client
+  ruby-oembed
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form

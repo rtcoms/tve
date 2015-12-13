@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem "rack-dev-mark"
+gem "ruby-oembed"
 
 gem 'awesome_print'
 gem 'quiet_assets', group: :development

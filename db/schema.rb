@@ -11,15 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212182359) do
+ActiveRecord::Schema.define(version: 20151213090511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "content_sections", force: :cascade do |t|
+    t.integer  "content_type"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "event_at"
+    t.string   "url_to_image"
+    t.string   "embed_url"
+    t.text     "embed_content"
+    t.string   "credits_text"
+    t.string   "credits_url"
+    t.string   "tags"
+    t.integer  "news_paper_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -48,17 +64,18 @@ ActiveRecord::Schema.define(version: 20151212182359) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "summary"
-    t.integer  "category_id"
-    t.integer  "user_id"
-    t.string   "post_type"
-    t.integer  "status"
-    t.date     "post_date"
-    t.string   "countries"
+    t.integer  "post_type",       null: false
+    t.date     "post_for_date"
+    t.integer  "category_id",     null: false
     t.string   "tags"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "subscribed_tags"
+    t.string   "countries"
+    t.string   "title",           null: false
+    t.text     "summary"
+    t.integer  "status",          null: false
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "taggings", force: :cascade do |t|
